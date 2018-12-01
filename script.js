@@ -20,6 +20,20 @@ window.onload=function(){
 			div.append(img);
 
 			$('body').append(div);
-		}	
+		}
 	});
+
+	// make an order
+	$.post(
+		'http://nit.tron.net.ua/api/order/add',
+		{
+			'token': 'TjAEyKM7zro3FcZlFO4N',
+			'name': $('#name_field').value,
+			'phone': '999',
+			'email': 'asd@gmail.com',
+		},
+		data => {
+			console.log(data);
+		}
+	);
 }
