@@ -1,0 +1,13 @@
+#tovar_view {
+    width: 100%;
+}
+
+.tovar_cell {
+    width: 10em;
+    height: 15em;
+    float: left;
+}
+
+.tovar_cell img {
+    width: 4em;
+}

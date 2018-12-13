@@ -1,4 +1,4 @@
-const url='http://nit.tron.net.ua/api/product/list';
+;const url='http://nit.tron.net.ua/api/product/list';
 
 window.onload=function(){
 	$.get('http://nit.tron.net.ua/api/product/list', function( data ) {
@@ -14,12 +14,16 @@ window.onload=function(){
 			var img = $('<img class="someclass" />');
 			img.attr('src', currentTovar.image_url);
 
-			var div = $('<div></div>');
+            var priceDiv = $('<div></div>');
+            priceDiv.text(currentTovar.price);
+
+			var div = $('<div class="tovar_cell"></div>');
 			div.append(nameDiv);
 			div.append(descriptionDiv);
-			div.append(img);
+            div.append(img);
+            div.append(priceDiv);
 
-			$('body').append(div);
+			$('#tovar_view').append(div);
 		}
 	});
 
@@ -37,3 +41,5 @@ window.onload=function(){
 		}
 	);
 }
+
+console.log(`The time is ${new Date()}`);
