@@ -5,11 +5,9 @@ import { request } from 'https';
 
 const url='http://nit.tron.net.ua/api/product/list';
 
-window.onload=function(){
+$(document).ready(() => {
 	$.get('http://nit.tron.net.ua/api/product/list', data => {
-		for (var i = 0; i < data.length; ++i) {
-			var currentTovar = data[i];
-
+		data.forEach(currentTovar => {
 			var nameDiv = $('<div class="tovar_title"></div>');
 			nameDiv.text(currentTovar.name);
 			
@@ -39,12 +37,11 @@ window.onload=function(){
 
             var div = $('<div class="tovar_cell"></div>');
 			div.append(nameDiv);
-			// div.append(descriptionDiv);
             div.append(img);
             div.append(priceDiv);
             div.append(addButton);
 
 			$('#tovar_view').append(div);
-		}
+		});
 	});
-}
+});
