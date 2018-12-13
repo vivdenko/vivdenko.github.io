@@ -1,0 +1,13 @@
+#tovar_view {
+  width: 100%; }
+
+.tovar_cell {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.23);
+  width: 20em;
+  height: 15em;
+  float: left;
+  font-family: arial; }
+
+.tovar_cell img {
+  width: 4em; }
+
